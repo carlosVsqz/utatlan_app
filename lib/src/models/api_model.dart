@@ -15,6 +15,12 @@ class Token{
 
   Token({this.token});
 
+  factory Token.toBearer(String header){
+    return Token(
+      token: 'Bearer'+ header
+    );
+  }
+
   factory Token.fromJson(Map<String, dynamic> json) {
     return Token(
       token: json['token']

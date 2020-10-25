@@ -1,6 +1,7 @@
 
-import 'package:utatlan_app/database/user_database.dart';
-import 'package:utatlan_app/model/user_model.dart';
+
+import 'package:utatlan_app/src/models/user_model.dart';
+import 'package:utatlan_app/src/resources/database/user_database.dart';
 
 class UserDao {
   final dbProvider = DatabaseProvider.dbProvider;

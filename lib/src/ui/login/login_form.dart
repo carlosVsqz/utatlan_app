@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:utatlan_app/login/bloc/login_bloc.dart';
+
+import 'file:///C:/Users/admin/IdeaProjects/utatlan_app/lib/src/blocs/login/login_bloc.dart';
 
 class LoginForm extends StatefulWidget {
   @override
@@ -8,14 +9,14 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
-  final _usernameController = TextEditingController();
+  final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     _onLoginButtonPressed() {
       BlocProvider.of<LoginBloc>(context).add(LoginButtonPressed(
-        email: _usernameController.text,
+        email: _emailController.text,
         password: _passwordController.text,
       ));
     }
@@ -24,7 +25,7 @@ class _LoginFormState extends State<LoginForm> {
       listener: (context, state) {
         if (state is LoginFaliure) {
           Scaffold.of(context).showSnackBar(SnackBar(
-            content: Text('${state.error}'),
+            content: Text('ERROR: '+'${state.error}'),
             backgroundColor: Colors.red,
           ));
         }
@@ -42,7 +43,7 @@ class _LoginFormState extends State<LoginForm> {
                     TextFormField(
                       decoration: InputDecoration(
                           labelText: 'username', icon: Icon(Icons.person)),
-                      controller: _usernameController,
+                      controller: _emailController,
                     ),
                     TextFormField(
                       decoration: InputDecoration(

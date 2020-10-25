@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:utatlan_app/repository/user_repository.dart';
+import 'package:utatlan_app/src/blocs/auth/authentication_bloc.dart';
+import 'package:utatlan_app/src/blocs/login/login_bloc.dart';
+import 'package:utatlan_app/src/resources/repository/user_repository.dart';
 
-import 'package:utatlan_app/bloc/authentication_bloc.dart';
-import 'package:utatlan_app/login/bloc/login_bloc.dart';
-import 'package:utatlan_app/login/login_form.dart';
+import 'login_form.dart';
 
 class LoginPage extends StatelessWidget {
   final UserRepository userRepository;

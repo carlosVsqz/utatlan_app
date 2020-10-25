@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:equatable/equatable.dart';
-import 'package:utatlan_app/bloc/authentication_bloc.dart';
-import 'package:utatlan_app/repository/user_repository.dart';
+import 'package:meta/meta.dart';
+import 'package:utatlan_app/src/blocs/auth/authentication_bloc.dart';
+import 'package:utatlan_app/src/resources/repository/user_repository.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';

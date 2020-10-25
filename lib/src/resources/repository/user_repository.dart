@@ -1,9 +1,10 @@
 import 'dart:async';
-import 'package:utatlan_app/model/user_model.dart';
+
 import 'package:meta/meta.dart';
-import 'package:utatlan_app/model/api_model.dart';
-import 'package:utatlan_app/api_connection/api_connection.dart';
-import 'package:utatlan_app/dao/user_dao.dart';
+import 'package:utatlan_app/src/dao/user_dao.dart';
+import 'package:utatlan_app/src/models/api_model.dart';
+import 'package:utatlan_app/src/models/user_model.dart';
+import 'package:utatlan_app/src/resources/api_connection/api_connection.dart';
 
 class UserRepository {
   final userDao = UserDao();
