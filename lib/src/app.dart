@@ -19,7 +19,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.red,
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
       ),
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state) {
